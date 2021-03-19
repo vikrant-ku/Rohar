@@ -1,0 +1,129 @@
+{% extends './basic.html' %}
+{% load static %}
+{% block title %}| {{category}} {% endblock %}
+
+ {% block head %}
+	<!-- Photographer Specific Stylesheet -->
+	<link rel="stylesheet" href="{% static 'demos/photographer/photographer.css' %}" type="text/css" />
+	<!-- Photographer Specific Fonts -->
+	<link rel="stylesheet" href="{% static 'demos/photographer/css/fonts.css' %}" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="{% static 'demos/photographer/css/menu.css' %}" />
+
+
+{% endblock %}
+
+	{% block style %}   {% endblock %}
+
+{% block body %}
+
+	<!-- Page Title
+		============================================= -->
+		<section id="page-title" style="background-image: url({% static 'iimages/photography-banner.jpg' %}); background-size: cover; background-position: center center;" data-bottom-top="background-position:0px 400px;" data-top-bottom="background-position:data-bottom-top;">
+
+			<div class="container clearfix">
+				<h1>Services</h1>
+				<span>{{category}}</span>
+
+			</div>
+
+		</section><!-- #page-title end -->
+
+<!-- Content
+		============================================= -->
+		<section id="content" style="margin: 60px 0 0 0; padding: 60px 0 0 0;">
+
+			<div class="content-wrap pt-0">
+
+
+
+				<!-- Section Photographs
+				============================================= -->
+				<div class="section bg-transparent">
+
+					<div class="container">
+
+
+
+						<div class="row grid-container gutter-30" style="overflow: visible;">
+
+							<!-- Photographs
+							============================================= -->
+							{% for photo in photos %}
+							<div class="col-lg-4 col-sm-6 rounded img-hover-wrap">
+								<div class="img-hover-card">
+									<a href="{{photo.image.url}}" data-lightbox="image"><img src="{{photo.image.url}}" alt="Image"></a>
+									<div class="img-hover-detail">
+										<small class="text-light ls1 font-weight-light">{{photo.category}}</small>
+										<h3 class="img-hover-title"><a href="#">{{photo.title}}</a></h3>
+										<div class="img-link"><a href="#"><i class="icon-line-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+
+						</div>
+
+						<div class="offset-sm-1 my-6" style="padding-left:40%">
+								{% if photos.has_next or photos.has_previous %}
+								<ul class="pagination pagination-circle pagination-dark">
+								{% if photos.has_previous %}
+							  		<li class="page-item"><a class="page-link" href="/photography/{{category}}?page={{photos.previous_page_number}}" aria-label="Previous"> <span aria-hidden="true">&laquo;</span></a></li>
+							    {% endif %}
+								{% for p in photos.paginator.page_range  %}
+									{% if photos.number == p %}
+										<li class="page-item active"><a class="page-link" href="/photography/{{category}}?page={{p}}">{{p}}</a></li>
+									{% else %}
+										<li class="page-item"><a class="page-link" href="/photography/{{category}}?page={{p}}">{{p}}</a></li>
+									{% endif %}
+							    {% endfor %}
+								{% if photos.has_next %}
+							  		<li class="page-item"><a class="page-link" href="/photography/{{category}}?page={{photos.next_page_number}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+								{% endif %}
+								</ul>
+								{% endif %}
+							</div>
+						<!-- Titles
+						============================================= -->
+						{% if photos.has_next %}
+						{% else %}
+						<div class="row mt-5">
+
+							<div class="col-sm-6 offset-sm-1">
+								<h2 class="font-weight-bold ls0 mb-3" style="font-size: 38px;">More Coming Soon..</h2>
+								<p class="text-muted" style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur blanditiis saepe dolore tempora nihil praesentium dolorum unde, earum, nostrum odit?</p>
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+
+{% endblock %}
+
+{% block js %}
+	<!-- Menu Open Plugin
+	============================================= -->
+	<script src="{% static 'demos/photographer/js/menu-easing.js' %}"></script>
+	<script src="{% static 'demos/photographer/js/hover3d.js' %}" ></script>
+
+	<script>
+
+		// Hover Script
+		$(".img-hover-wrap").hover3d({
+			selector: ".img-hover-card",
+			shine: false,
+		});
+
+	</script>
+
+<!-- slider script -->
+
+
+
+
+{% endblock %}
+

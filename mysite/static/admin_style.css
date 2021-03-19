@@ -1,0 +1,39 @@
+#branding h1{
+ color:#ff9d16;
+ font-weight: 600;
+}
+#header {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #0c163b;
+    color: #ffc;
+    overflow: hidden;
+}
+
+div.breadcrumbs {
+    background: #708f41;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #ffd457;
+    text-align: left;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #0c163b;
+    color: #fff;
+}
+
+#nav-sidebar .current-app .section:link, #nav-sidebar .current-app .section:visited {
+    color: #ffd457;
+    font-weight: bold;
+}

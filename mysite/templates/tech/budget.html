@@ -1,0 +1,1010 @@
+{% extends './basic.html' %}
+{% load static %}
+
+{% block title %}| Budget {% endblock %}
+
+ {% block head %}    {% endblock %}
+
+	{% block style %}  
+
+	<style>
+		.form-group > label.error {
+			display: block !important;
+			text-transform: none;
+		}
+
+		.form-group input.valid ~ label.error,
+		.form-group input[type="text"] ~ label.error,
+		.form-group input[type="email"] ~ label.error,
+		.form-group input[type="number"] ~ label.error,
+		.form-group select ~ label.error { display: none !important; }
+
+		section#page-title {
+		background-image: url(static/iimages/budget-bnr.jpg);
+		background-size: cover;
+		background-position: center;
+			}
+
+		.btn-outline-secondary:not(:disabled):not(.disabled).active {
+			background-color: #44aaac;
+		}
+
+		.btn-outline-secondary:not(:disabled):not(.disabled).active:hover {
+			background-color: #005985;
+		}
+		#application-cost button.btn.btn-success.btn-lg {
+			width: 100%;
+			background-color: transparent;
+			border: 1px solid gray;
+			color: #737373;
+		}
+
+		#application-cost button.btn.btn-success.btn-lg:hover {
+			background-color: #44aaac;
+			color: #fff;
+		}
+		.iti.iti--allow-dropdown.iti--separate-dial-code {
+   		 width: 100%;
+		}
+
+	</style>
+
+	 {% endblock %}
+
+  {% block body %}
+
+
+  <!-- Page Title
+		============================================= -->
+		<section id="page-title" style="background-image: url({% static 'iimages/rt.jpg' %})">
+
+			<div class="container clearfix">
+				<h1>application Costing Quote</h1>
+				<span>For Web and ios App</span>
+
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container clearfix">
+
+				<h2 >Estimate Budget</h2>
+					<hr>
+
+							<div class="tabs clearfix mt-5" id="tab-3">
+
+								<ul class="tab-nav tab-nav2 clearfix">
+									<li><a href="#tabs-9">Web Application</a></li>
+									<li><a href="#tabs-10">Mobile Application</a></li>
+									<li><a href="#tabs-11">Web & Mobile Application</a></li>
+
+								</ul>
+
+								<div class="tab-container mt-5">
+
+									<div class="tab-content clearfix" id="tabs-9">
+										<div class="row">
+											<div class="col-lg-4 order-lg-1 mb-4">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="w-50">Items:</th>
+											<th class="w-50">Price:</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Responsive Design:</td>
+											<td class="web-responsive-value font-weight-semibold">$0</td>
+										</tr>
+										<tr>
+											<td>Template Design:</td>
+											<td class="web-Template-value font-weight-semibold">$0</td>
+										</tr>
+										<tr>
+											<td>Website Type:</td>
+											<td class="web-website-type-value font-weight-semibold">$0</td>
+										</tr>
+										<tr>
+											<td>Style of Design:</td>
+											<td class="web-design-value font-weight-semibold">$0</td>
+										</tr>
+										<tr>
+											<td># of Pages:</td>
+											<td class="web-pages-value font-weight-semibold">$0</td>
+										</tr>
+										<tr>
+											<td>Technologies:</td>
+											<td class="web-Technologies-value font-weight-semibold">$0</td>
+										</tr>
+
+
+										<tr>
+											<th class="font-weight-semibold h5 mb-0">Total</th>
+											<th class="web-total-price h5 font-weight-semibold mb-0">$0</th>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+											<div class="col-lg-8">
+
+												<div class="form-result"></div>
+												<form class="row mb-0" id="website-cost" action="/budget/" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+										<div class="col-md-6 form-group mb-4">
+											<label class="mb-3">Responsive Design:</label><br>
+											<div class="btn-group btn-group-toggle" data-toggle="buttons">
+												<label for="website-cost-responsive-no" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+													<input type="radio" name="website-cost-responsive" id="website-cost-responsive-no" required checked data-price="0" autocomplete="off" value="Dekstop"> Dekstop
+												</label>
+												<label for="website-cost-responsive-yes" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-responsive" id="website-cost-responsive-yes" required data-price="1000" autocomplete="off" value="Dekstop + Mobile"> Dekstop &amp; Mobile
+												</label>
+											</div>
+										</div>
+
+										<div class="col-md-6 form-group mb-4">
+											<label class="mb-3">Template Design:</label><br>
+											<div class="btn-group btn-group-toggle" data-toggle="buttons">
+												<label for="website-cost-Template-yes" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-Template" id="website-cost-Template-yes" data-price="1000" required autocomplete="off" value="Yes"> Yes Please!
+												</label>
+												<label for="website-cost-Template-no" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+													<input type="radio" name="website-cost-Template" id="website-cost-Template-no" required checked data-price="0" autocomplete="off" value="No"> No Thanks!
+												</label>
+											</div>
+										</div>
+
+										<div class="col-12 form-group mb-4">
+											<label for="website-cost-type-corporate" class="mb-3">Website Type:</label><br>
+											<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+												<label for="website-cost-type-corporate" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-type" required id="website-cost-type-corporate" autocomplete="off" data-price="200" value="Corporate"> Corporate
+												</label>
+												<label for="website-cost-type-ecommerce" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-type" required id="website-cost-type-ecommerce" autocomplete="off" data-price="400" value="eCommerce"> eCommerce
+												</label>
+												<label for="website-cost-type-blog" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-type" required id="website-cost-type-blog" autocomplete="off" data-price="100" value="Blog"> Blog
+												</label>
+												<label for="website-cost-type-personal" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-type" required id="website-cost-type-personal" autocomplete="off" data-price="80" value="Personal"> Personal
+												</label>
+												<label for="website-cost-type-management" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-type" required id="website-cost-type-management" autocomplete="off" data-price="300" value="management"> management
+												</label>
+											</div>
+										</div>
+										<div class="col-12 form-group mb-4">
+											<label for="website-cost-design-basic" class="mb-3">Style of Design:</label><br>
+											<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+												<label for="website-cost-design-basic" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott active">
+													<input type="radio" name="website-cost-design" id="website-cost-design-basic" autocomplete="off" required checked data-price="0" autocomplete="off" value="Basic"> Basic
+												</label>
+												<label for="website-cost-design-flat" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-design" required id="website-cost-design-flat" autocomplete="off" data-price="500" value="Flat"> Flat
+												</label>
+												<label for="website-cost-design-modern" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-design" required id="website-cost-design-modern" autocomplete="off" data-price="1500" value="Modern"> Modern
+												</label>
+											</div>
+										</div>
+										<div class="col-8 form-group mb-4">
+											<label for="website-cost-pages" class="mb-3">Number of Pages:</label><br>
+											<input id="website-cost-pages" name="website-cost-pages" class="website-pages required input-range-slider" />
+										</div>
+
+										<div class="col-12 form-group mb-4">
+											<label for="website-cost-Technologies-wordpress" class="mb-3">Technologies:</label><br>
+											<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+												<label for="website-cost-Technologies-wordpress" class="btn btn-outline-secondary px-4 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-Technologies" required id="website-cost-Technologies-wordpress" autocomplete="off" data-price="1200" value="Wordpress" > <i class="icon-wordpress-simple"></i> Wordpress
+												</label>
+												<label for="website-cost-Technologies-Java" class="btn btn-outline-secondary px-4 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-Technologies" required id="website-cost-Technologies-Java" autocomplete="off" data-price="800" value="Java"> <i class="icon-java"></i> Java
+												</label>
+												<label for="website-cost-Technologies-Python Django" class="btn btn-outline-secondary px-4 font-weight-semibold ls0 nott">
+													<input type="radio" name="website-cost-Technologies" required id="website-cost-Technologies-Python Django" autocomplete="off" data-price="1400" value="Django"> <i class="icon-python"></i> Python Django
+												</label>
+
+											</div>
+										</div>
+
+
+
+
+										<!--	form detail fields	-->
+													<div class="line"></div>
+
+									<div class="col-md-6 form-group mb-4">
+										<label for="website-cost-name">Name:</label>
+										<input type="text" name="name" id="website-cost-name" required class="form-control required" value="" placeholder="Enter your Full Name">
+									</div>
+									<div class="col-md-6 form-group mb-4">
+										<label for="website-cost-contact">Contact:</label><br>
+
+										<input type="tel" name="contact" id="website-cost-contact" required class="form-control phone_number" value="" placeholder="Enter your Contact Number">
+									</div>
+									<div class="col-12 form-group mb-4">
+										<label for="website-cost-email">Email:</label>
+										<input type="email" name="email" id="website-cost-email" required class="form-control required" value="" placeholder="Enter your Email">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="website-cost-message">Additional Message (Optional):</label>
+										<textarea name="message" id="website-cost-message" class="form-control" cols="30" rows="10"></textarea>
+									</div>
+
+									<div class="col-12 " id="application-cost">
+
+										<button type="submit" name="website-cost-submit" class="btn btn-success btn-lg">Confirm</button>
+									</div>
+
+
+								</form>
+
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class="tab-content clearfix" id="tabs-10">
+										<div class="row">
+											<div class="col-lg-4 order-lg-1 mb-4">
+												<div class="table-responsive">
+													<table class="table">
+														<thead>
+															<tr>
+																<th class="w-50">Items:</th>
+																<th class="w-50">Price:</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Application:</td>
+																<td class="app-responsive-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Template Design:</td>
+																<td class="app-Template-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>application Type:</td>
+																<td class="app-application-type-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Style of Design:</td>
+																<td class="app-design-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td># of Pages:</td>
+																<td class="app-pages-value font-weight-semibold">$0</td>
+															</tr>
+
+															<tr>
+																<td>Database Provided:</td>
+																<td class="app-Database-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Api's Provided:</td>
+																<td class="app-Api-value font-weight-semibold">$0</td>
+															</tr>
+
+															<tr>
+																<th class="font-weight-semibold h5 mb-0">Total</th>
+																<th class="app-total-price h5 font-weight-semibold mb-0">$0</th>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+
+											<div class="col-lg-8">
+												<div class="">
+												<div class="form-result"></div>
+												<form class="row mb-0" id="app-cost" action="/budget_app/" method="post" enctype="multipart/form-data">{% csrf_token %}
+									<div class="col-md-6 form-group mb-4">
+										<label class="mb-3">Application For:</label><br>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label for="android" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+												<input type="radio" name="application-cost-responsive" id="android" required checked data-price="0" autocomplete="off" value="android"> Android
+											</label>
+											<label for="IOS" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-responsive" id="IOS" required  data-price="10" autocomplete="off" value="IOS"> IOS
+											</label>
+											<label for="android-ios" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-responsive" id="android-ios" required data-price="20" autocomplete="off" value="android & ios"> Android &amp; IOS
+											</label>
+										</div>
+									</div>
+
+									<div class="col-md-6 form-group mb-4">
+										<label class="mb-3">Template Design:</label><br>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label for="application-cost-Template-yes" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-Template" id="application-cost-Template-yes" data-price="1000" required autocomplete="off" value="Yes"> Yes Please!
+											</label>
+											<label for="application-cost-Template-no" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+												<input type="radio" name="application-cost-Template" id="application-cost-Template-no" required checked data-price="0" autocomplete="off" value="No"> No Thanks!
+											</label>
+										</div>
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="application-cost-type-corporate" class="mb-3">application Type:</label><br>
+										<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+											<label for="application-cost-type-corporate" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-type" required id="application-cost-type-corporate" autocomplete="off" data-price="200" value="Corporate"> Corporate
+											</label>
+											<label for="application-cost-type-ecommerce" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-type" required id="application-cost-type-ecommerce" autocomplete="off" data-price="400" value="eCommerce"> eCommerce
+											</label>
+											<label for="application-cost-type-blog" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-type" required id="application-cost-type-blog" autocomplete="off" data-price="100" value="Blog"> Blog
+											</label>
+											<label for="application-cost-type-personal" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-type" required id="application-cost-type-personal" autocomplete="off" data-price="80" value="Personal"> Personal
+											</label>
+											<label for="application-cost-type-management" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-type" required id="application-cost-type-management" autocomplete="off" data-price="300" value="management"> management
+											</label>
+										</div>
+									</div>
+									<div class="col-12 form-group mb-4">
+										<label for="application-cost-design-basic" class="mb-3">Style of Design:</label><br>
+										<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+											<label for="application-cost-design-basic" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott active">
+												<input type="radio" name="application-cost-design" id="application-cost-design-basic" autocomplete="off" required checked data-price="0" autocomplete="off" value="Basic"> Basic
+											</label>
+											<label for="application-cost-design-flat" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-design" required id="application-cost-design-flat" autocomplete="off" data-price="500" value="Flat"> Flat
+											</label>
+											<label for="application-cost-design-modern" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-design" required id="application-cost-design-modern" autocomplete="off" data-price="1500" value="Modern"> Modern
+											</label>
+										</div>
+									</div>
+									<div class="col-8 form-group mb-4">
+										<label for="application-cost-pages" class="mb-3">Number of Pages:</label><br>
+										<input id="application-cost-pages" name="application-cost-pages" class="application-pages required input-range-slider" />
+									</div>
+
+									<div class="col-md-6 form-group mb-4">
+										<label class="mb-3">Do you have database:</label><br>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+											<label for="application-application-cost-database-yes" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+												<input type="radio" name="application-cost-database" id="application-application-cost-database-yes" required checked data-price="0" autocomplete="off" value="Yes"> Yes
+											</label>
+											<label for="application-application-cost-database-no" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-database" id="application-application-cost-database-no" data-price="1000" required autocomplete="off" value="No"> No
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 form-group mb-4">
+										<label class="mb-3">Do you have Api's:</label><br>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+											<label for="application-application-cost-api-yes" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+												<input type="radio" name="application-cost-api" id="application-application-cost-api-yes" required checked data-price="0" autocomplete="off" value="Yes"> Yes
+											</label>
+											<label for="application-application-cost-api-no" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="application-cost-api" id="application-application-cost-api-no" data-price="1000" required autocomplete="off" value="No"> No
+											</label>
+										</div>
+									</div>
+
+
+
+
+										<!--	form detail fields	-->
+
+													<div class="line"></div>
+
+									<div class="col-md-6 form-group mb-4">
+										<label for="application-cost-name">Name:</label>
+										<input type="text" name="name" id="application-cost-name" required class="form-control required" value="" placeholder="Enter your Full Name">
+									</div>
+									<div class="col-md-6 form-group mb-4">
+										<label for="application-cost-contact">Contact:</label><br>
+										<input type="text" name="contact" id="application-cost-contact" required class="form-control phone_number" value="" placeholder="Enter your Contact Number">
+									</div>
+									<div class="col-12 form-group mb-4">
+										<label for="application-cost-email">Email:</label>
+										<input type="email" name="email" id="application-cost-email" required class="form-control required" value="" placeholder="Enter your Email">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="application-cost-message">Additional Message (Optional):</label>
+										<textarea name="message" id="application-cost-message" class="form-control" cols="30" rows="10"></textarea>
+									</div>
+									<div class="col-12 " id="application-cost" >
+										<button type="submit" name="website-cost-submit" class="btn btn-success btn-lg">Confirm</button>
+									</div>
+
+
+
+								</form>
+												</div>
+
+
+
+										</div>
+									</div>
+									</div>
+
+									<div class="tab-content clearfix" id="tabs-11">
+										 <div class="row">
+
+											<div class="col-lg-4 order-lg-1 mb-4">
+												<div class="table-responsive">
+													<table class="table">
+														<thead>
+															<tr>
+																<th class="w-50">Items:</th>
+																<th class="w-50">Price:</th>
+															</tr>
+														</thead>
+														<tbody>
+
+
+
+															<tr>
+																<td>Application:</td>
+																<td class="responsive-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Template Design:</td>
+																<td class="Template-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td> Technology:</td>
+																<td class="Technology-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>application Type:</td>
+																<td class="application-type-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Style of Design:</td>
+																<td class="design-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td># of Pages:</td>
+																<td class="pages-value font-weight-semibold">$0</td>
+															</tr>
+
+															<tr>
+																<td>Application For:</td>
+																<td class="Appfor-value font-weight-semibold">$0</td>
+															</tr>
+
+
+															<tr>
+																<th class="font-weight-semibold h5 mb-0">Total</th>
+																<th class="total-price h5 font-weight-semibold mb-0">$0</th>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+
+											<div class="col-lg-8">
+												<div class="">
+												<div class="form-result"></div>
+												<form class="row mb-0" id="web-app-cost" action="/budget_web_and_app/" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+													<div class="col-md-6 form-group mb-4">
+										<label class="mb-3">Responsive Design:</label><br>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+											<label for="web-app-cost-responsive-yes" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-responsive" id="web-app-cost-responsive-yes" class="required active" checked data-price="0" autocomplete="off" value="Dekstop + Mobile"> Dekstop &amp; Mobile
+											</label>
+										</div>
+									</div>
+
+													<div class="col-md-6 form-group mb-4">
+										<label class="mb-3">Template Design:</label><br>
+										<div class="btn-group btn-group-toggle" data-toggle="buttons">
+											<label for="web-app-cost-Template-yes" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-Template" id="web-app-cost-Template-yes" data-price="1000" required autocomplete="off" value="Yes"> Yes Please!
+											</label>
+											<label for="web-app-cost-Template-no" class="btn btn-outline-secondary px-3 font-weight-semibold active ls0 nott">
+												<input type="radio" name="web-app-cost-Template" id="web-app-cost-Template-no" required checked data-price="0" autocomplete="off" value="No"> No Thanks!
+											</label>
+										</div>
+									</div>
+
+
+													<div class="col-12 form-group mb-4">
+										<label for="web-app-cost-Technologies-wordpress" class="mb-3">Technologies:</label><br>
+										<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+											<label for="web-app-cost-Technologies-wordpress" class="btn btn-outline-secondary px-4 font-weight-semibold ls0 nott ">
+												<input type="radio" name="web-app-cost-Technologies" required id="web-app-cost-Technologies-wordpress" autocomplete="off" data-price="1200" value="Wordpress" > <i class="icon-wordpress-simple"></i>  Wordpress
+											</label>
+											<label for="web-app-cost-Technologies-Java" class="btn btn-outline-secondary px-4 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-Technologies" required id="web-app-cost-Technologies-Java" autocomplete="off" data-price="800" value="Java"> <i class="icon-java"></i> Java
+											</label>
+											<label for="web-app-cost-Technologies-Python Django" class="btn btn-outline-secondary px-4 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-Technologies" required id="web-app-cost-Technologies-Python Django" autocomplete="off" data-price="1400" value="Django">  <i class="icon-python"></i> Python Django
+											</label>
+
+										</div>
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="web-app-cost-type-corporate" class="mb-3">application Type:</label><br>
+										<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+											<label for="web-app-cost-type-corporate" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-type" class="required" id="web-app-cost-type-corporate" autocomplete="off" data-price="200" value="Corporate"> Corporate
+											</label>
+											<label for="web-app-cost-type-ecommerce" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-type" class="required" id="web-app-cost-type-ecommerce" autocomplete="off" data-price="400" value="eCommerce"> eCommerce
+											</label>
+											<label for="web-app-cost-type-blog" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-type" class="required" id="web-app-cost-type-blog" autocomplete="off" data-price="100" value="Blog"> Blog
+											</label>
+											<label for="web-app-cost-type-personal" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-type" class="required" id="web-app-cost-type-personal" autocomplete="off" data-price="80" value="Personal"> Personal
+											</label>
+											<label for="web-app-cost-type-management" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-type" class="required" id="web-app-cost-type-management" autocomplete="off" data-price="300" value="management"> management
+											</label>
+										</div>
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="web-app-cost-design-basic" class="mb-3">Style of Design:</label><br>
+										<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+											<label for="web-app-cost-design-basic" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott active">
+												<input type="radio" name="web-app-cost-design" id="web-app-cost-design-basic" autocomplete="off" required checked data-price="0" autocomplete="off" value="Basic"> Basic
+											</label>
+											<label for="web-app-cost-design-flat" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-design" required id="web-app-cost-design-flat" autocomplete="off" data-price="500" value="Flat"> Flat
+											</label>
+											<label for="web-app-cost-design-modern" class="btn btn-outline-secondary px-5 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-app-cost-design" required id="web-app-cost-design-modern" autocomplete="off" data-price="1500" value="Modern"> Modern
+											</label>
+										</div>
+									</div>
+									<div class="col-8 form-group mb-4">
+										<label for="web-app-cost-pages" class="mb-3">Number of Pages:</label><br>
+										<input id="web-app-cost-pages" name="web-app-cost-pages" class="web-app-pages required input-range-slider" />
+									</div>
+
+
+
+													<div class="line"></div>
+
+
+													<div class="col-12 form-group mb-4">
+										<label for="web-apps-cost-type-android" class="mb-3">Application For:</label><br>
+										<div class="btn-group btn-group-toggle flex-wrap" data-toggle="buttons">
+											<label for="web-apps-cost-type-android" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-apps-cost-type" required id="web-apps-cost-type-android" autocomplete="off" data-price="200" value="Android"> Android
+											</label>
+											<label for="web-apps-cost-type-ios" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-apps-cost-type" required id="web-apps-cost-type-ios" autocomplete="off" data-price="300" value="Ios"> Ios
+											</label>
+											<label for="web-apps-cost-type-androis-ios" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="radio" name="web-apps-cost-type" required id="web-apps-cost-type-androis-ios" autocomplete="off" data-price="500" value="Android & Ios"> Android & Ios
+											</label>
+										</div>
+									</div>
+
+
+										<!--	form detail fields	-->
+
+
+														<div class="line"></div>
+
+									<div class="col-md-6 form-group mb-4">
+										<label for="web-app-cost-name">Name:</label>
+										<input type="text" name="name" id="web-app-cost-name" required class="form-control" value="" placeholder="Enter your Full Name">
+									</div>
+									<div class="col-md-6 form-group mb-4">
+										<label for="web-app-cost-contact">Contact:</label><br>
+										<input type="text" name="contact" id="web-app-cost-contact" required class="form-control phone_number" value="" placeholder="Enter your Contact Number">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="web-app-cost-email">Email:</label>
+										<input type="email" name="email" id="web-app-cost-email" required class="form-control" value="" placeholder="Enter your Email">
+									</div>
+
+									<div class="col-12 form-group mb-4">
+										<label for="web-app-cost-message">Additional Message (Optional):</label>
+										<textarea name="message" id="web-app-cost-message" class="form-control" cols="30" rows="10"></textarea>
+									</div>
+									<div class="col-12 " id="application-cost">
+										<button type="submit" name="website-cost-submit" class="btn btn-success btn-lg">Confirm</button>
+									</div>
+
+
+
+
+								</form>
+												</div>
+
+
+
+										</div>
+									</div>
+									</div>
+
+
+								</div>
+
+							</div>
+
+				</div>
+			</div>
+		</section ><!-- #content end -->
+
+   {% endblock %}
+
+{% block js %}  
+<script src="js/components/tinymce/tinymce.min.js"></script>
+<!-- for Web App -->
+<script>
+		jQuery(document).ready( function(){
+
+			let pricingResponsive = 0,
+				pricingTemplate = 0,
+				pricingWebtype = 0,
+				pricingDesign = 0,
+				pricingPages = 0,
+				pricingTechnologies = 0,
+				pricingSEO = 1,
+				pricingGA = 0,
+				pricingUrgent = 0,
+				elementPrice = $("#website-cost-price"),
+				elementResponsive = $( 'input[name="website-cost-responsive"]' ),
+				elementTemplate = $( 'input[name="website-cost-Template"]' ),
+				elementWebType = $( 'input[name="website-cost-type"]' ),
+				elementDesign = $( 'input[name="website-cost-design"]' ),
+				elementPages = $(".website-pages"),
+				elementTechnologies = $("input[name='website-cost-Technologies']");
+
+
+
+
+
+			elementResponsive.on( 'change', function(){
+				pricingResponsive = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies, pricingSEO, pricingGA, pricingUrgent );
+			});
+
+			elementTemplate.on( 'change', function(){
+				pricingTemplate = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies, pricingSEO, pricingGA, pricingUrgent );
+			});
+
+			elementWebType.on( 'change', function(){
+				pricingWebtype = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies, pricingSEO, pricingGA, pricingUrgent );
+			});
+
+			elementDesign.on( 'change', function(){
+				pricingDesign = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies, pricingSEO, pricingGA, pricingUrgent );
+			});
+
+			elementPages.ionRangeSlider({
+				min: 10,
+				max: 100,
+				from: 10,
+				step: 10,
+				max_postfix: "+",
+				onStart: function(data){
+					pricingPages = data.from;
+				}
+			});
+
+			elementPages.on( 'change', function(){
+				pricingPages = $(this).prop('value');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies );
+			});
+
+			elementTechnologies.on( 'change', function(){
+				pricingTechnologies = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies );
+			});
+
+			calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingTechnologies );
+
+			function calculatePrice( responsive, Template, webtype, design, pages, Technologies ) {
+				let TotalPriceValue = Number(responsive) + Number(Template) + Number(webtype) + Number(design) + ( Number(pages) * 100 ) + Number(Technologies) ;
+				jQuery('.web-responsive-value').html( '$'+pricingResponsive );
+				jQuery('.web-Template-value').html( '$'+pricingTemplate );
+				jQuery('.web-website-type-value').html( '$'+pricingWebtype );
+				jQuery('.web-design-value').html( '$'+pricingDesign );
+				jQuery('.web-pages-value').html('$'+pricingPages * 100);
+				jQuery('.web-Technologies-value').html('$'+pricingTechnologies);
+				jQuery('.web-total-price').html( '$'+TotalPriceValue );
+				elementPrice.val( TotalPriceValue ).change();
+			}
+
+			$('#website-cost').on( 'formSubmitSuccess', function(){
+				$('.responsive-value, .Template-value, .website-type-value, .design-value, .pages-value, .Technologies-value, .total-price' ).html( '$0' );
+			});
+
+			tinymce.init({
+				selector: '#website-cost-message',
+				menubar: false,
+				setup: function(editor) {
+					editor.on('change', function(e) {
+						editor.save();
+					});
+				}
+			});
+
+		});
+	</script>
+<!-- for ios App -->
+<script>
+		jQuery(document).ready( function(){
+
+			let pricingResponsive = 0,
+				pricingTemplate = 0,
+				pricingWebtype = 0,
+				pricingDesign = 0,
+				pricingPages = 0,
+				pricingDatabase = 0,
+				pricingApi = 0,
+
+				elementPrice = $("#application-cost-price"),
+				elementResponsive = $( 'input[name="application-cost-responsive"]' ),
+				elementTemplate = $( 'input[name="application-cost-Template"]' ),
+				elementWebType = $( 'input[name="application-cost-type"]' ),
+				elementDesign = $( 'input[name="application-cost-design"]' ),
+				elementPages = $(".application-pages"),
+				elementDatabase = $("input[name='application-cost-database']");
+				elementApi = $("input[name='application-cost-api']");
+
+
+
+
+
+			elementResponsive.on( 'change', function(){
+				pricingResponsive = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+
+			elementTemplate.on( 'change', function(){
+				pricingTemplate = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+
+			elementWebType.on( 'change', function(){
+				pricingWebtype = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+
+			elementDesign.on( 'change', function(){
+				pricingDesign = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+
+			elementPages.ionRangeSlider({
+				min: 10,
+				max: 100,
+				from: 10,
+				step: 10,
+				max_postfix: "+",
+				onStart: function(data){
+					pricingPages = data.from;
+				}
+			});
+
+			elementPages.on( 'change', function(){
+				pricingPages = $(this).prop('value');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+
+			elementDatabase.on( 'change', function(){
+				pricingDatabase = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+			elementApi.on( 'change', function(){
+				pricingApi = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+			});
+
+			calculatePrice( pricingResponsive, pricingTemplate, pricingWebtype, pricingDesign, pricingPages, pricingDatabase, pricingApi );
+
+			function calculatePrice( responsive, Template, webtype, design, pages, Database, Api ) {
+				let TotalPriceValue = Number(responsive) + Number(Template) + Number(webtype) + Number(design) + ( Number(pages) * 100 ) + Number(Database) + Number(Api) ;
+				jQuery('.app-responsive-value').html( '$'+pricingResponsive );
+				jQuery('.app-Template-value').html( '$'+pricingTemplate );
+				jQuery('.app-application-type-value').html( '$'+pricingWebtype );
+				jQuery('.app-design-value').html( '$'+pricingDesign );
+				jQuery('.app-pages-value').html('$'+pricingPages * 100);
+				jQuery('.app-Database-value').html('$'+pricingDatabase);
+				jQuery('.app-Api-value').html('$'+pricingApi);
+				jQuery('.app-total-price').html( '$'+TotalPriceValue );
+				elementPrice.val( TotalPriceValue ).change();
+			}
+
+			$('#application-cost').on( 'formSubmitSuccess', function(){
+				$('.responsive-value, .Template-value, .application-type-value, .design-value, .pages-value, .database-value, .api-value, .total-price' ).html( '$0' );
+			});
+
+			tinymce.init({
+				selector: '#application-cost-message',
+				menubar: false,
+				setup: function(editor) {
+					editor.on('change', function(e) {
+						editor.save();
+					});
+				}
+			});
+
+		});
+	</script>
+
+
+<!-- for web & ios App -->
+	<script>
+		jQuery(document).ready( function(){
+
+			let pricingResponsive = 0,
+				pricingTemplate = 0,
+				pricingTechnology = 0,
+				pricingWebtype = 0,
+				pricingDesign = 0,
+				pricingPages = 0,
+				pricingAppfor = 0,
+
+
+				elementPrice = $("#web-app-cost-price"),
+				elementResponsive = $( 'input[name="web-app-cost-responsive"]' ),
+				elementTemplate = $( 'input[name="web-app-cost-Template"]' ),
+				elementTechnology = $( 'input[name="web-app-cost-Technologies"]' ),
+				elementWebType = $( 'input[name="web-app-cost-type"]' ),
+				elementDesign = $( 'input[name="web-app-cost-design"]' ),
+				elementPages = $(".web-app-pages"),
+				elementAppfor = $( 'input[name="web-apps-cost-type"]' );
+
+
+			elementResponsive.on( 'change', function(){
+				pricingResponsive = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+			elementTemplate.on( 'change', function(){
+				pricingTemplate = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+			elementTechnology.on( 'change', function(){
+				pricingTechnology = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+			elementWebType.on( 'change', function(){
+				pricingWebtype = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+			elementDesign.on( 'change', function(){
+				pricingDesign = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+			elementPages.ionRangeSlider({
+				min: 10,
+				max: 100,
+				from: 10,
+				step: 10,
+				max_postfix: "+",
+				onStart: function(data){
+					pricingPages = data.from;
+				}
+			});
+
+			elementPages.on( 'change', function(){
+				pricingPages = $(this).prop('value');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+			elementAppfor.on( 'change', function(){
+				pricingAppfor = $(this).attr('data-price');
+				calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+			});
+
+
+			calculatePrice( pricingResponsive, pricingTemplate, pricingTechnology, pricingWebtype, pricingDesign, pricingPages, pricingAppfor );
+
+			function calculatePrice( responsive, Template, Technology, webtype, design, pages, Appfor ) {
+				let TotalPriceValue = Number(responsive) + Number(Template) + Number(Technology) + Number(webtype) + Number(design) + ( Number(pages) * 100 ) + Number(Appfor) ;
+				jQuery('.responsive-value').html( '$'+pricingResponsive );
+				jQuery('.Template-value').html( '$'+pricingTemplate );
+				jQuery('.Technology-value').html( '$'+pricingTechnology );
+				jQuery('.application-type-value').html( '$'+pricingWebtype );
+				jQuery('.design-value').html( '$'+pricingDesign );
+				jQuery('.pages-value').html('$'+pricingPages * 100);
+				jQuery('.Appfor-value').html('$'+pricingAppfor );
+				jQuery('.total-price').html( '$'+TotalPriceValue );
+				elementPrice.val( TotalPriceValue ).change();
+			}
+
+			$('#application-cost').on( 'formSubmitSuccess', function(){
+				$('.responsive-value, .Template-value, .application-type-value, .design-value, .pages-value, .database-value, .api-value, .total-price' ).html( '$0' );
+			});
+
+			tinymce.init({
+				selector: '#application-cost-message',
+				menubar: false,
+				setup: function(editor) {
+					editor.on('change', function(e) {
+						editor.save();
+					});
+				}
+			});
+
+		});
+	</script>
+
+<!-- inTelInput start	-->
+
+<script>
+	var phone_number = window.intlTelInput(document.querySelector("#website-cost-contact"), {
+	  separateDialCode: true,
+	  preferredCountries:["in"],
+	  hiddenInput: "full",
+	  utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+	});
+
+	$("#website-cost").submit(function() {
+	  var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+	$("#website-cost-contact").val(full_number);
+	});
+  </script>
+
+<script>
+	var phone_number = window.intlTelInput(document.querySelector("#application-cost-contact"), {
+	  separateDialCode: true,
+	  preferredCountries:["in"],
+	  hiddenInput: "appfull",
+	  utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+	});
+
+	$("#app-cost").submit(function() {
+	  var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+	$("#application-cost-contact").val(full_number);
+	});
+  </script>
+
+<script>
+	var phone_number = window.intlTelInput(document.querySelector("#web-app-cost-contact"), {
+	  separateDialCode: true,
+	  preferredCountries:["in"],
+	  hiddenInput: "webappfull",
+	  utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+	});
+
+	$("#web-app-cost").submit(function() {
+	  var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+	$("#web-app-cost-contact").val(full_number);
+	});
+  </script>
+	<!-- inTelInput end	-->
+
+
+
+
+
+
+
+  {% endblock %}
+

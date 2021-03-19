@@ -1,0 +1,547 @@
+{% extends './basic.html' %} {% load static %} {% block title %}{% endblock %} {% block head %} {% endblock %} {% block style %}
+<style>
+    .iti.iti--allow-dropdown.iti--separate-dial-code {
+        width: 100%;
+    }
+    .owl-nav {
+    display : none;}
+</style>
+{% endblock %}
+{% block body %}
+
+<!-- Slider
+		============================================= -->
+<div class="bnr" >
+    <div class="row" style="margin: 0px !important;">
+        <div class="col-6 bnr-text">
+            <div class="banner-heading banner-btn">
+                <h1 data-animate="fadeInLeft">
+                    At RoharTech <br />
+                    we are building
+                </h1>
+
+                <h2 style="color: yellow;" data-animate="fadeInDown">
+                    <span style="color: #ffffff;"><i class="icon-quote-left1"></i> </span>
+                    Tech that ease your business
+                    <span style="color: #ffffff;"><i class="icon-quote-right1"></i> </span>
+                </h2>
+                <a href="/budget/"><button type="button" data-animate="fadeInUp">Estimate Budget</button></a>
+                 <div class="awds">
+                <div class="awd-bdy">
+                    <div class="awd-1 k">
+                     <img src="static/iimages/index/work.png">
+                     <h3>36000</h3>
+                     <span>Hours & still counting</span>
+                </div>
+                <div class="awd-2 k">
+                     <img src="static/iimages/index/complete.png">
+                     <h3>150+</h3>
+                     <span>Projects</span>
+                </div>
+                <div class="awd-3 k">
+                     <img src="static/iimages/index/customers.png">
+                     <h3>100+</h3>
+                     <span>Clients</span>
+                </div>
+                </div>
+
+            </div>
+            </div>
+
+        </div>
+        <div class="col-6 bnr-image">
+            <form class="mb-0" id="template-contactform" name="contactform" action="/contact_us/" method="post">
+                {% csrf_token %}
+
+
+                <h3 style="text-align: center;">Get in touch</h3>
+                <div class="form-process">
+                    <div class="css3-spinner">
+                        <div class="css3-spinner-scaler"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="text" id="template-contactform-name" name="name" value="" placeholder="Name" required class="sm-form-control required" />
+                    </div>
+
+                    <div class="col-md-12 form-group">
+                        <input type="email" id="template-contactform-email" name="email" value="" placeholder="Email" required class="required email sm-form-control" />
+                    </div>
+
+                    <div class="col-md-12 form-group">
+                        <input type="tel" id="phone_number" name="phone" value="" placeholder="Mobile Number" required class="sm-form-control" />
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="text" name="subject" value="" placeholder="Subject" required class="sm-form-control" />
+                    </div>
+
+                    <div class="col-md-12 form-group">
+                        <input type="text" id="template-contactform-subject" name="message" value="" placeholder="Drop a Message" required class="required sm-form-control" />
+                    </div>
+
+                    <div class="col-12 form-group btn-align">
+                        <button type="submit" id="submit-button" tabindex="5" class="button button-3d m-0">Submit Query</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Content
+		============================================= -->
+<section id="content" >
+    <div class="content-wrap py-0">
+        <div class="container clearfix" >
+            <!-- Slider negetive Box
+					============================================= -->
+            <div class="row justify-content-center slider-box-wrap clearfix">
+                <div class="col-10">
+                    <div class="slider-bottom-box">
+                        <div class="row align-items-center clearfix">
+                            <div class="col-lg-4 mb-3 mb-lg-0">
+                                <h2 class="mb-3 h1 font-weight-light" data-animate="fadeInUp">Features</h2>
+
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <ul class="iconlist m-0">
+                                    <li><img src="{% static 'demos/hosting/images/svg/checked.svg' %}" width="20" height="20" alt="Image" class="mr-2" />Legal/Trusted Body.</li>
+                                    <li class="pt-3"><img src="{% static 'demos/hosting/images/svg/checked.svg' %}" width="20" height="20" alt="Image" class="mr-2" />Effective Management.</li>
+                                    <li class="pt-3"><img src="{% static 'demos/hosting/images/svg/checked.svg' %}" width="20" height="20" alt="Image" class="mr-2" />Solution Oriented.</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <ul class="iconlist m-0">
+                                    <li class="pt-3 pt-lg-0"><img src="{% static 'demos/hosting/images/svg/checked.svg' %}" width="20" height="20" alt="Image" class="mr-2" />Excellent Customer Service.</li>
+                                    <li class="pt-3"><img src="{% static 'demos/hosting/images/svg/checked.svg' %}" width="20" height="20" alt="Image" class="mr-2" />Advanced Technology Use.</li>
+                                    <li class="pt-3"><img src="{% static 'demos/hosting/images/svg/checked.svg' %}" width="20" height="20" alt="Image" class="mr-2" />Perpetual Succession.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section
+					============================================= -->
+            <div class="heading-block center topmargin-lg mx-auto border-bottom-0 clearfix" style="max-width: 700px;">
+                <h2 data-animate="fadeInUp">We provide best services for you.</h2>
+
+            </div>
+            <div class="row col-mb-50 mb-0 mt-4" style="overflow:hidden;">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box not-dark">
+                        <div class="fbox-content">
+                            <img src="{% static 'iimages/svg/sketch.svg' %}" class="rounded-0 bg-transparent text-left" alt="Image" style="height: 80px;" data-animate="fadeInUp" />
+                            <h3 class="card-title font-weight-bolder" data-animate="fadeInUp">WEB DEVELOPMENT</h3>
+                            <p class="font-weight-light" style="text-align: justify;" data-animate="fadeInLeft">
+                                We are the best web development company in Chandigarh who provides the services of building custom websites, E-commerce websites, or any kind of website by using Python, Java, and WordPress.
+We have an enriched dedicated team of web developers who professionally build or manage websites.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box not-dark">
+                        <div class="fbox-content">
+                            <img src="https://img.icons8.com/nolan/64/medical-mobile-app.png" class="rounded-0 bg-transparent text-left" alt="Image" style="height: 80px;" data-animate="fadeInUp" />
+                            <h3 class="card-title font-weight-bolder" data-animate="fadeInUp">MOBILE APP DEVELOPMENT</h3>
+                            <p class="font-weight-light" data-animate="fadeInDown" style="text-align: justify;">
+                                Our team of Mobile app development builds a program that will run on any mobile platform: iOS and Android, through which you can operate everything remotely.
+For Android app development we use Java and for iOS app development, we use swift. We are a mobile application development company in Chandigarh which is famous for its best services.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box not-dark">
+                        <div class="fbox-content">
+                            <img src="{% static 'iimages/svg/gd.svg' %}" class="rounded-0 bg-transparent text-left" alt="Image" style="height: 80px;" data-animate="fadeInUp" />
+                            <h3 class="card-title font-weight-bolder" data-animate="fadeInUp">Web & Graphic Designing</h3>
+                            <p class="font-weight-light" data-animate="fadeInRight" style="text-align: justify;">
+                                We are a great team of a skillful graphic designer who understands better about the picture, color, and designs. Our services for graphic designing includes- Social Media Post, Animation, UI design, Logo, Banner, Brochure, Flyer, Photography, Videography, Illustration, Package Design, etc. We are the best graphic designing company in Chandigarh who are experts in innovation and creativity.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box not-dark">
+                        <div class="fbox-content">
+                            <img src="{% static 'iimages/svg/dm.svg' %}" class="rounded-0 bg-transparent text-left" alt="Image" style="height: 80px;" data-animate="fadeInUp" />
+                            <h3 class="card-title font-weight-bolder" data-animate="fadeInUp">DIGITAL MARKETING</h3>
+                            <p class="font-weight-light" data-animate="fadeInLeft" style="text-align: justify;">
+                                We are a professional digital marketing agency in Chandigarh and the services we offer include consultation and management options for a variety of online marketing tactics for search engine optimization (SEO), pay-per-click (PPC) ads, Youtube Marketing, Content Writing, conversion rate optimization (CRO), and more. Our team can provide you full support of Digital Marketing with positive results.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box not-dark">
+                        <div class="fbox-content">
+                            <img src="https://img.icons8.com/color/48/000000/professional-photographer.png" class="rounded-0 bg-transparent text-left" data-animate="fadeInUp" alt="Image" style="height: 52px;" />
+                            <h3 class="card-title font-weight-bolder" data-animate="fadeInUp">Photography</h3>
+                            <p class="font-weight-light" data-animate="fadeInUp" style="text-align: justify;">
+                                Our professional photography or photo shooting service team are sharp in their skill who can add value to your picture by creating high-quality photos. We do photoshoots of generally everything, Fashion photography, product photography, candid photography, jewelry photography, brand photography, food-beverage photography, Portraits, advertisement photography, business photography. We are a famous photographer in Chandigarh, Get in touch to get a click from us.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-box not-dark">
+                        <div class="fbox-content">
+
+                            <img src="https://img.icons8.com/cute-clipart/64/000000/video-message.png" alt="Image" style="height: 52px;" data-animate="fadeInUp" />
+                            <h3 class="card-title font-weight-bolder" data-animate="fadeInUp">Video Editing and Shooting</h3>
+                            <p class="font-weight-light" data-animate="fadeInRight" style="text-align: justify;">
+                                Our video shooting and editing experts recognize your requirements and build them creatively. We do video shooting of everything, Promo video, Story Video, Vlogs, Fashion Vlogs, product videography, candid videography, jewelry videography, brand photography, advertisement videography, business videography, and more as per client requirement. We are a famous videographer in Chandigarh, Get in touch to get a shoot from us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Addition Service Section
+                ============================================= -->
+        <div
+            class="section fixable parallax m-0"
+            style="background-image: url({% static 'iimages/bw.jpg' %}); background-filter: brightness(0.5); padding: 150px 0; z-index: 100; background-size: cover;"
+            data-bottom-top="background-position:0px 0px;">
+            <div class="row cleafix">
+                <div class="col-md-4 dark set">
+                    <div class="heading-block bottommargin-sm border-0">
+                        <h3 class="nott" style="font-size: 46px; font-weight: 700; letter-spacing: -2px; line-height: 58px;">Serving Best for All</h3>
+                    </div>
+                    <p>
+                        Rohar Technology is a leading IT company in Chandigarh, India. We are a reputed IT company service provider built with dedicated and proficient teammates who are providing the best services of Web Development, Mobile
+                        App Development, Digital Marketing, Graphic Designer, Photography, and Videography.
+                    </p>
+                </div>
+
+                <div class="topmargin d-block d-lg-none d-xl-block"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <!-- Testimonials slider
+                            ============================================= -->
+        <section class="testi-slider">
+            <h2>What Client Say!!</h2>
+            <div class="col-md-5 offset-md-1">
+                <div
+                    id="oc-testimonials"
+                    class="owl-carousel center testimonials-carousel testimonial-full carousel-widget mt-5"
+                    data-margin="0"
+                    data-items-xs="1"
+                    data-items-sm="1"
+                    data-items-md="1"
+                    data-items-lg="2"
+                    data-items-xl="3"
+                    data-center="true"
+                    data-loop="true"
+                    data-autoplay="4000"
+                    data-speed="500"
+                >
+                    <!-- Item 1 -->
+                    <div class="oc-item">
+                        <div class="testimonial p-4 border-0 shadow-none">
+                            <div class="testi-image">
+                                <a href="#"><img src="{% static 'iimages/testimonials/1.jpg' %}" alt="Customer Testimonails" /></a>
+                            </div>
+                            <ul class="list-unstyled ml-0 mt-4 mb-2">
+                                <li class="color"><i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star-half-full"></i></li>
+                            </ul>
+                            <div class="testi-content">
+                                <p class="font-body font-normal">I am glad that I chose Rohar Technologies to create a website for my firm. I got a better version of what I asked for.</p>
+                                <div class="testi-meta">
+                                    Michelle
+                                    <span>Taylor Morrison</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="oc-item">
+                        <div class="testimonial p-4 border-0 shadow-none">
+                            <div class="testi-image">
+                                <a href="#"><img src="{% static 'demos/hosting/images/users/2.jpg' %}" alt="Customer Testimonails" /></a>
+                            </div>
+                            <ul class="list-unstyled ml-0 mt-4 mb-2">
+                                <li class="color"><i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star-empty"></i></li>
+                            </ul>
+                            <div class="testi-content">
+                                <p class="font-body font-normal">A quality product is what we will deliver you”, said the developer at Rohar Technologies. And believe me, that’s exactly what I got. Keep up the good work!!!</p>
+                                <div class="testi-meta">
+                                    Rishab
+                                    <span>PWC Complex.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="oc-item">
+                        <div class="testimonial p-4 border-0 shadow-none">
+                            <div class="testi-image">
+                                <a href="#"><img src="{% static 'iimages/client/12.png' %}" alt="Customer Testimonails" /></a>
+                            </div>
+                            <ul class="list-unstyled ml-0 mt-4 mb-2">
+                                <li class="color"><i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i></li>
+                            </ul>
+                            <div class="testi-content">
+                                <p class="font-normal font-body">Being a start-up, it was not easy for us to get the right kind of business. Thanks to the digital marketing team at Rohar Technologies, we could target and connect with the right audiences.</p>
+                                <div class="testi-meta">
+                                        Gaurav.
+                                    <span>Naveen Store.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="oc-item">
+                        <div class="testimonial p-4 border-0 shadow-none">
+                            <div class="testi-image">
+                                <a href="#"><img src="{% static 'iimages/client/2.jpg' %}" alt="Customer Testimonails" /></a>
+                            </div>
+                            <ul class="list-unstyled ml-0 mt-4 mb-2">
+                                <li class="color"><i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i></li>
+                            </ul>
+                            <div class="testi-content">
+                                <p class="font-normal font-body">To get out-of-the-box solutions for all your real-time problems, Rohar Technologies is your answer. They deliver what they promise.</p>
+                                <div class="testi-meta">
+                                    Sanjay
+                                    <span>Beauty Palace.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="oc-item">
+                        <div class="testimonial p-4 border-0 shadow-none">
+                            <div class="testi-image">
+                                <a href="#"><img src="{% static 'demos/hosting/images/users/3.jpg' %}" alt="Customer Testimonails" /></a>
+                            </div>
+                            <ul class="list-unstyled ml-0 mt-4 mb-2">
+                                <li class="color"><i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star3"></i> <i class="icon-star-empty"></i></li>
+                            </ul>
+                            <div class="testi-content">
+                                <p class="font-normal font-body">My business has been progressing since I moved to Rohar Tech. I’m so glad to have this agency to handle my project and looking forward to future collaborations.</p>
+                                <div class="testi-meta">
+                                        Brizet
+                                    <span>Roma Boots.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- process step
+		============================================= -->
+        <section class="our-blog p-0 m-0 bg-silver">
+            <div class="container work-process pb-5 pt-5">
+                <div class="title mb-5 text-center">
+                    <h2>How We<span  style="color:#005985;"> Deliver Best For You</span></h2>
+                </div>
+                <!-- ============ step 1 =========== -->
+                <div class="row adst">
+                    <div class="col-md-5" data-animate="fadeInLeft">
+                        <div class="process-box process-left" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="process-step">
+                                        <h2 class="m-0 p-0">01</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Analysing Your Requirements</h5>
+                                    <p><small>We analyze your requirements properly, deal with all inefficiencies and complexities, and then make you sure whether your project can be built on your expectation or not.</small></p>
+                                </div>
+                            </div>
+                            <div class="process-line-l"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <div class="process-point-right"></div>
+                    </div>
+                </div>
+                <!-- ============ step 2 =========== -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="process-point-left"></div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5" data-animate="fadeInRight">
+                        <div class="process-box process-right" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="process-step">
+                                        <h2 class="m-0 p-0">02</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Risk Management</h5>
+                                    <p><small>We deal with all occurring risks over the development phase of your project and help the project remain on track and meet your goal.</small></p>
+                                </div>
+                            </div>
+                            <div class="process-line-r"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============ step 3 =========== -->
+                <div class="row">
+                    <div class="col-md-5" data-animate="fadeInLeft">
+                        <div class="process-box process-left" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-md-5" data-animate="fadeInLeft">
+                                    <div class="process-step">
+                                        <h2 class="m-0 p-0">03</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Develop Your Product</h5>
+                                    <p><small>During this phase, we deal with developing everything that needs to be implemented in the project and finally will be deliverable to you</small></p>
+                                </div>
+                            </div>
+                            <div class="process-line-l"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <div class="process-point-right"></div>
+                    </div>
+                </div>
+                <!-- ============ step 4 =========== -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="process-point-left"></div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5" data-animate="fadeInRight">
+                        <div class="process-box process-right" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="process-step">
+                                        <h2 class="m-0 p-0">04</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Quality Analysis</h5>
+                                    <p><small>In Quality Analysis we deal with the examination and investigation of the project activity and identify the project quality. </small></p>
+                                </div>
+                            </div>
+                            <div class="process-line-r"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ step 3 =========== -->
+                <div class="row">
+                    <div class="col-md-5" data-animate="fadeInLeft">
+                        <div class="process-box process-left" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="process-step">
+                                        <h2 class="m-0 p-0">05</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h5>Endless Management For Your Ease</h5>
+                                    <p><small>After the project is delivered this phase takes place. We do provide maintenance and fixes of the project if it breaks or needs any upgrades or repairs.</small></p>
+                                </div>
+                            </div>
+                            <div class="process-line-l"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <div class="process-point-right process-last"></div>
+                    </div>
+                </div>
+                <!-- ============ -->
+            </div>
+        </section>
+        <!-- #process step end -->
+
+        <!-- Bottom Section
+				============================================= -->
+        <div class="section dark m-0">
+            <div class="container">
+                <div class="row center justify-content-center">
+                    <div class="col-md-8">
+                        <h2 class="font-weight-bold text-white mb-3">BUILD YOUR SOFTWARE PRODUCT WITH US.</h2>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="/budget/" class="button center bg-white color button-light button-rounded button-large ml-0">ESTIMATE NOW </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trusted Client Section
+				============================================= -->
+        <div class="section me-design pt-0 bg-transparent">
+            <div class="container clearfix">
+                <div class="mx-auto" style="max-width: 1000px;">
+                    <div class="heading-block center mx-auto border-bottom-0 clearfix" style="max-width: 700px;">
+                        <h2 data-animate="fadeInUp">Our Recent Projects</h2>
+                    </div>
+                    <!-- Clients Images -->
+
+                    <div
+                        id="oc-clients-full"
+                        class="owl-carousel image-carousel carousel-widget"
+                        data-margin="30"
+                        data-nav="false"
+                        data-loop="true"
+                        data-autoplay="5000"
+                        data-pagi="false"
+                        data-items-xs="2"
+                        data-items-sm="3"
+                        data-items-md="4"
+                        data-items-lg="5"
+                        data-items-xl="6"
+                    >
+                        <img src="{% static 'iimages/client/1.png' %}" alt="Clients" />
+                        <img src="{% static 'iimages/client/2.png' %}" alt="Clients" />
+                        <img src="{% static 'iimages/client/3.png' %}" alt="Clients" />
+                        <img src="{% static 'iimages/client/4.png' %}" alt="Clients" />
+                        <img src="{% static 'iimages/client/5.png' %}" alt="Clients" />
+                        <img src="{% static 'iimages/client/12.png' %}" alt="Clients" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trusted Client end
+                    ============================================= -->
+    </div>
+</section>
+<!-- #content end -->
+
+<!-- Slider
+      ============================================= -->
+
+<!-- #Slider end -->
+
+{% endblock %} {% block js %}
+
+
+
+
+{% endblock %}
