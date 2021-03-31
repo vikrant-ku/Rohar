@@ -4,6 +4,9 @@ from django.contrib import messages
 from django.template.loader import  get_template
 from django.core.mail import EmailMessage
 from django.core.paginator import Paginator , PageNotAnInteger , EmptyPage
+import json
+import requests
+
 
 def index(request):
     return render(request, 'tech/index.html')
@@ -70,16 +73,29 @@ def contact(request):
         phone = request.POST.get('phone')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        contact = Contact(name=name, email=email, phone=phone, subject=subject, message=message)
-        contact.save()
-        resp = sendmail(email, name)
-        if resp == True:
-            error_msg = "Your message has been send.."
-            messages.success(request, error_msg)
-        else:
-            error_msg = "Oops.. Something went wrong.."
-            messages.error(request, error_msg)
-        return HttpResponseRedirect(url)
+
+        # recaptcha stuff
+        client_key = request.POST['g-recaptcha-response']
+        secret_key = '6LfGhZYaAAAAAJZO7sDSHp9uyWhnGgSvcbEy8mDr'
+
+        captchaData = {
+                    'secret' : secret_key,
+                    'response':client_key
+                }
+        req = requests.post('https://www.google.com/recaptcha/api/siteverify', data=captchaData)
+        response = json.loads(req.text)
+        verify = response['success']
+        if verify:
+            contact = Contact(name=name, email=email, phone=phone, subject=subject, message=message)
+            resp = sendmail(email, name)
+            if resp == True:
+                contact.save()
+                error_msg = "Your message has been send.."
+                messages.success(request, error_msg)
+            else:
+                error_msg = "Oops.. Something went wrong.."
+                messages.error(request, error_msg)
+            return HttpResponseRedirect(url)
     return render(request, 'tech/contact.html')
 
 def budget(request):
@@ -205,6 +221,15 @@ def budget_web_and_app(request):
 
         return HttpResponseRedirect(url)
     return render(request, 'tech/budget.html')
+
+def budget_dm(request):
+    if request.method == 'POST':
+        url = request.META["HTTP_REFERER"]
+        data = request.POST
+        print(data)
+    return render(request, 'tech/budget.html')
+
+
 
 def error_404(request, exception):
 

@@ -19,7 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update address and mobile" />
+    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update address and mobile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/rohartech/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/rohartech/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/rohartech/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/rohartech/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/static/iimages/banner/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/iimages/banner/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/static/iimages/banner/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/iimages/banner/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/app_developement.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/app_developement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/budget.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/budget.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/digital_marketing.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/digital_marketing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/graphics.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/graphics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/photography.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/photography.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/tech/web_developement.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/tech/web_developement.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -6,8 +6,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','3.6.238.39']
 
-
-
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True

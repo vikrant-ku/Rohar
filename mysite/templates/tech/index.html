@@ -25,7 +25,7 @@
                     Tech that ease your business
                     <span style="color: #ffffff;"><i class="icon-quote-right1"></i> </span>
                 </h2>
-                <a href="/budget/"><button type="button" data-animate="fadeInUp">Estimate Budget</button></a>
+                <a href="{% url 'budget' %}"><button type="button" data-animate="fadeInUp">Estimate Budget</button></a>
                  <div class="awds">
                 <div class="awd-bdy">
                     <div class="awd-1 k">
@@ -50,7 +50,7 @@
 
         </div>
         <div class="col-6 bnr-image">
-            <form class="mb-0" id="template-contactform" name="contactform" action="/contact_us/" method="post">
+            <form class="mb-0" id="template-contactform" name="contactform" action="{% url 'contact' %}" method="post">
                 {% csrf_token %}
 
 
@@ -488,7 +488,7 @@ For Android app development we use Java and for iOS app development, we use swif
                         <h2 class="font-weight-bold text-white mb-3">BUILD YOUR SOFTWARE PRODUCT WITH US.</h2>
                     </div>
                     <div class="col-md-8">
-                        <a href="/budget/" class="button center bg-white color button-light button-rounded button-large ml-0">ESTIMATE NOW </a>
+                        <a href="{% url 'budget' %}" class="button center bg-white color button-light button-rounded button-large ml-0">ESTIMATE NOW </a>
                     </div>
                 </div>
             </div>

@@ -32,22 +32,27 @@
 		.btn-outline-secondary:not(:disabled):not(.disabled).active:hover {
 			background-color: #005985;
 		}
-		#application-cost button.btn.btn-success.btn-lg {
+
+		.cost button.btn.btn-success.btn-lg {
 			width: 100%;
 			background-color: transparent;
 			border: 1px solid gray;
 			color: #737373;
 		}
 
-		#application-cost button.btn.btn-success.btn-lg:hover {
+		.cost button.btn.btn-success.btn-lg:hover {
 			background-color: #44aaac;
 			color: #fff;
 		}
 		.iti.iti--allow-dropdown.iti--separate-dial-code {
    		 width: 100%;
 		}
+		.hide{
+		display: none;
+		}
 
 	</style>
+
 
 	 {% endblock %}
 
@@ -81,6 +86,7 @@
 									<li><a href="#tabs-9">Web Application</a></li>
 									<li><a href="#tabs-10">Mobile Application</a></li>
 									<li><a href="#tabs-11">Web & Mobile Application</a></li>
+									<li><a href="#tabs-12">Digital marketing</a></li>
 
 								</ul>
 
@@ -136,7 +142,7 @@
 											<div class="col-lg-8">
 
 												<div class="form-result"></div>
-												<form class="row mb-0" id="website-cost" action="/budget/" method="post" enctype="multipart/form-data">{% csrf_token %}
+												<form class="row mb-0" id="website-cost" action="{% url 'budget' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
 
 										<div class="col-md-6 form-group mb-4">
 											<label class="mb-3">Responsive Design:</label><br>
@@ -242,7 +248,7 @@
 										<textarea name="message" id="website-cost-message" class="form-control" cols="30" rows="10"></textarea>
 									</div>
 
-									<div class="col-12 " id="application-cost">
+									<div class="col-12 cost">
 
 										<button type="submit" name="website-cost-submit" class="btn btn-success btn-lg">Confirm</button>
 									</div>
@@ -310,7 +316,7 @@
 											<div class="col-lg-8">
 												<div class="">
 												<div class="form-result"></div>
-												<form class="row mb-0" id="app-cost" action="/budget_app/" method="post" enctype="multipart/form-data">{% csrf_token %}
+												<form class="row mb-0" id="app-cost" action="{% url 'budget-app' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
 									<div class="col-md-6 form-group mb-4">
 										<label class="mb-3">Application For:</label><br>
 										<div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -426,7 +432,7 @@
 										<label for="application-cost-message">Additional Message (Optional):</label>
 										<textarea name="message" id="application-cost-message" class="form-control" cols="30" rows="10"></textarea>
 									</div>
-									<div class="col-12 " id="application-cost" >
+									<div class="col-12 cost">
 										<button type="submit" name="website-cost-submit" class="btn btn-success btn-lg">Confirm</button>
 									</div>
 
@@ -500,7 +506,7 @@
 											<div class="col-lg-8">
 												<div class="">
 												<div class="form-result"></div>
-												<form class="row mb-0" id="web-app-cost" action="/budget_web_and_app/" method="post" enctype="multipart/form-data">{% csrf_token %}
+												<form class="row mb-0" id="web-app-cost" action="{% url 'budget-web-and-app' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
 
 													<div class="col-md-6 form-group mb-4">
 										<label class="mb-3">Responsive Design:</label><br>
@@ -625,9 +631,458 @@
 										<label for="web-app-cost-message">Additional Message (Optional):</label>
 										<textarea name="message" id="web-app-cost-message" class="form-control" cols="30" rows="10"></textarea>
 									</div>
-									<div class="col-12 " id="application-cost">
+									<div class="col-12 cost">
 										<button type="submit" name="website-cost-submit" class="btn btn-success btn-lg">Confirm</button>
 									</div>
+
+
+
+
+								</form>
+												</div>
+
+
+
+										</div>
+									</div>
+									</div>
+
+									<div class="tab-content clearfix" id="tabs-12">
+										 <div class="row">
+
+											<div class="col-lg-4 order-lg-1 mb-4">
+												<div class="table-responsive">
+													<table class="table">
+														<thead>
+															<tr>
+																<th class="w-50">Items:</th>
+																<th class="w-50">Price:</th>
+															</tr>
+														</thead>
+														<tbody>
+
+
+
+															<tr>
+																<td>Search Engine Optimization(SEO):</td>
+																<td class="seo-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Local SEO:</td>
+																<td class="lseo-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td> Email Marketing:</td>
+																<td class="em-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Google AdWord/PPC:</td>
+																<td class="ppc-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Social Media Marketing (SMM):</td>
+																<td class="smm-value font-weight-semibold">$0</td>
+															</tr>
+															<tr>
+																<td>Youtube/Video Marketing:</td>
+																<td class="youtube-value font-weight-semibold">$0</td>
+															</tr>
+
+															<tr>
+																<td>Web Analytics:</td>
+																<td class="web-value font-weight-semibold">$0</td>
+															</tr>
+
+															 <tr>
+																<td>Affiliate Marketing:</td>
+																<td class="affiliate-value font-weight-semibold">$0</td>
+															</tr>
+
+															 <tr>
+																<td>Ecommerce Marketing:</td>
+																<td class="ecommerce-value font-weight-semibold">$0</td>
+															</tr>
+
+															  <tr>
+																<td>Mobile App Marketing:</td>
+																<td class="mobile-app-value font-weight-semibold">$0</td>
+															</tr>
+
+															  <tr>
+																<td>Web Traffic:</td>
+																<td class="web-traffic font-weight-semibold">$0</td>
+															</tr>
+
+															 <tr>
+																<td>Content Marketing:</td>
+																<td class="content-value font-weight-semibold">$0</td>
+															</tr>
+
+															 <tr>
+																<td>Music Promotion:</td>
+																<td class="music-value font-weight-semibold">$0</td>
+															</tr>
+
+															  <tr>
+																<td>Domain Research:</td>
+																<td class="domain-value font-weight-semibold">$0</td>
+															</tr>
+
+															<tr>
+																<th class="font-weight-semibold h5 mb-0">Total</th>
+																<th class="dm-total-price h5 font-weight-semibold mb-0">$0</th>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+
+											<div class="col-lg-8">
+												<div class="">
+												<div class="form-result"></div>
+												<form class="row mb-0" id="dm" action="{% url 'budget-dm' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+												<div class="col-md-12 ">
+													<label class="mb-3">Services:</label><br>
+												</div>
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+											<label for="seo" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="checkbox" name="web-app-cost-responsive" id="seo" onclick="service('seo')" data-price="0" autocomplete="off" value="Search Engine Optimization(SEO)">Search Engine Optimization(SEO)
+											</label>
+										</div>
+													<div class="col-12 bottommargin-sm hide" id="seo_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="keyword" name="service_type" value="10">
+																<label class="form-check-label" for="Keyword">Keyword Research</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="On-Page" name="service_type" value="20">
+																<label class="form-check-label" for="On-Page">On-Page</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="Off-Page" name="service_type" value="30">
+																<label class="form-check-label" for="Off-Page">Off-Page</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+										<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+											<label for="localseo" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="checkbox" name="web-app-cost-responsive" id="localseo" onclick="service('localseo')" data-price="0" autocomplete="off" value="Local SEO">Local SEO
+											</label>
+										</div>
+										<div class="col-12 bottommargin-sm hide" id="localseo_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="Google" name="service_type" value="20">
+																<label class="form-check-label" for="Google">Google My Business</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="Local" name="service_type" value="20">
+																<label class="form-check-label" for="Local">Local Citations And Directories</label>
+															</div>
+										</div>
+									</div>
+
+												<div class="col-md-6 form-group mb-4">
+										<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+											<label for="email" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+												<input type="checkbox" name="web-app-cost-responsive" id="email" onclick="service('email')"  data-price="0" autocomplete="off" value="Email Marketing">Email Marketing
+											</label>
+										</div>
+										<div class="col-12 bottommargin-sm hide" id="email_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="yes" name="service_type" value="30">
+																<label class="form-check-label" for="Google">Yes</label>
+															</div>
+
+										</div>
+									</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="ppc" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="ppc" onclick="service('ppc')" data-price="0" autocomplete="off" value="Google AdWord/PPC">Google AdWord/PPC
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="ppc_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="Mail" name="service_type" value="30">
+																<label class="form-check-label" for="Mail">MailChimp</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="Automation" name="service_type" value="30">
+																<label class="form-check-label" for="Email">Email Automation</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="Campaign" name="service_type" value="10">
+																<label class="form-check-label" for="Campaign">Campaign Management</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="smm" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="smm" onclick="service('smm')"  value="30">Social Media Marketing (SMM)
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="smm_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="mobile" name="service_type" value="30">
+																<label class="form-check-label" for="mobile">Mobile</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="contactform-mail" name="service_type" value="60">
+																<label class="form-check-label" for="contactform-mail">Email</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="youtube" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="youtube" onclick="service('youtube')" data-price="0" autocomplete="off" value="Youtube/Video Marketing">Youtube/Video Marketing
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="youtube_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="video_seo" name="service_type" value="50">
+																<label class="form-check-label" for="video_seo">Video SEO</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="promotion" name="service_type" value="40">
+																<label class="form-check-label" for="promotion">Video Promotion and Distribution</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="video_ad" name="service_type" value="20">
+																<label class="form-check-label" for="video_ad">Video Ad Campaigns</label>
+															</div>
+													</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="web" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="web" onclick="service('web')" data-price="0" autocomplete="off" value="Web Analytics">Web Analytics
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="web_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="setup" name="service_type" value="10">
+																<label class="form-check-label" for="setup">Setup</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="tracking" name="service_type" value="10">
+																<label class="form-check-label" for="tracking">Tracking and Reporting</label>
+															</div>
+														<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="optimization" name="service_type" value="10">
+																<label class="form-check-label" for="optimization">Optimization</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="bugfixes" name="service_type" value="10">
+																<label class="form-check-label" for="bugfixes">Bug Fixes</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="affiliate" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="affiliate" onclick="service('affiliate')" data-price="0" autocomplete="off" value="Affiliate">Affiliate Marketing
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="affiliate_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="a_service" name="service_type" value="20">
+																<label class="form-check-label" for="a_service">select a service</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="program" name="service_type" value="20">
+																<label class="form-check-label" for="program">Program Strategy & Setup</label>
+															</div>
+														<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="affilates" name="service_type" value="20">
+																<label class="form-check-label" for="affilates">Affilates Recrutiment</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="link" name="service_type" value="20">
+																<label class="form-check-label" for="link">Link promotiomns</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="ecommerce" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="ecommerce" onclick="service('ecommerce')" data-price="0" autocomplete="off" value="Ecommerce">Ecommerce Marketing
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="ecommerce_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="ecomm_sco" name="service_type" value="30">
+																<label class="form-check-label" for="ecomm_sco">Ecommerce SCO</label>
+															</div>
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="webpro" name="service_type" value="30">
+																<label class="form-check-label" for="webpro">Website Promotiont</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="prom_lstng" name="service_type" value="30">
+																<label class="form-check-label" for="prom_lstng">Promoted Listing</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="mobile_app" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="mobile_app" onclick="service('mobile_app')" data-price="0" autocomplete="off" value="Mobile App">Mobile App Marketing
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="mobile_app_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="app_store" name="service_type" value="10">
+																<label class="form-check-label" for="app_store">App Store Optimization</label>
+															</div>
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="app_prom" name="service_type" value="10">
+																<label class="form-check-label" for="app_prom">App Promotion</label>
+															</div>
+
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="web_traffic" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="web_traffic" onclick="service('web_traffic')" data-price="0" autocomplete="off" value="Web Traffic">Web Traffic
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="web_traffic_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="web_treff" name="service_type" value="30">
+																<label class="form-check-label" for="app_store">Yes</label>
+															</div>
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="cntnt" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="cntnt" onclick="service('cntnt')" data-price="0" autocomplete="off" value="Content Marketing">Content Marketing
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="cntnt_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="cntnt_mrktng" name="service_type" value="60">
+																<label class="form-check-label" for="app_store">Yes</label>
+															</div>
+
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="music" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="music" onclick="service('music')" autocomplete="off" value="Music Promotion">Music Promotion
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="music_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="music_prom" name="service_type" value="20">
+																<label class="form-check-label" for="app_store">Yes</label>
+															</div>
+
+										</div>
+												</div>
+
+												<div class="col-md-6 form-group mb-4">
+													<div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+
+														<label for="domain" class="btn btn-outline-secondary px-3 font-weight-semibold ls0 nott">
+															<input type="checkbox" name="web-app-cost-responsive" id="domain" onclick="service('domain')" data-price="0" autocomplete="off" value="Domain Research">Domain Research
+														</label>
+													</div>
+													<div class="col-12 bottommargin-sm hide" id="domain_service">
+
+															<div class="form-check">
+																<input class="form-check-input valid" type="checkbox" id="domain_prom" name="service_type" value="10">
+																<label class="form-check-label" for="app_store">Yes</label>
+															</div>
+
+										</div>
+												</div>
+
+											<!--	form detail fields	-->
+												<div class="line"></div>
+
+											<div class="col-md-6 form-group mb-4">
+												<label for="web-app-cost-name">Name:</label>
+												<input type="text" name="name" id="dm-name" required class="form-control" value="" placeholder="Enter your Full Name">
+											</div>
+											<div class="col-md-6 form-group mb-4">
+												<label for="web-app-cost-contact">Contact:</label><br>
+												<input type="text" name="contact" id="dm-contact" required class="form-control phone_number" value="" placeholder="Enter your Contact Number">
+											</div>
+
+											<div class="col-12 form-group mb-4">
+												<label for="web-app-cost-email">Email:</label>
+												<input type="email" name="email" id="dm-email" required class="form-control" value="" placeholder="Enter your Email">
+											</div>
+
+											<div class="col-12 form-group mb-4">
+												<label for="web-app-cost-message">Additional Message (Optional):</label>
+												<textarea name="message" id="dm-message" class="form-control" cols="30" rows="10"></textarea>
+											</div>
+											<input type="hidden" id="dm_seo" name="seo">
+											<input type="hidden" id="dm_lseo" name="lseo">
+											<input type="hidden" id="dm_email" name="email">
+											<input type="hidden" id="dm_ppc" name="ppc">
+											<input type="hidden" id="dm_smm" name="smm">
+											<input type="hidden" id="dm_youtube" name="youtube">
+											<input type="hidden" id="dm_analytics" name="analytics">
+											<input type="hidden" id="dm_affiliate" name="affiliate">
+											<input type="hidden" id="dm_e_comm" name="e_comm">
+											<input type="hidden" id="dm_mobile" name="mobile">
+											<input type="hidden" id="dm_traffic" name="traffic">
+											<input type="hidden" id="dm_content" name="content">
+											<input type="hidden" id="dm_music" name="music">
+											<input type="hidden" id="dm_domain" name="domain">
+
+
+											<div class="col-12 cost">
+												<button type="submit" name="dm-submit" class="btn btn-success btn-lg">Confirm</button>
+											</div>
 
 
 
@@ -852,9 +1307,8 @@
 		});
 	</script>
 
-
 <!-- for web & ios App -->
-	<script>
+<script>
 		jQuery(document).ready( function(){
 
 			let pricingResponsive = 0,
@@ -998,7 +1452,354 @@
 	$("#web-app-cost-contact").val(full_number);
 	});
   </script>
+
+<script>
+	var phone_number = window.intlTelInput(document.querySelector("#dm-contact"), {
+	  separateDialCode: true,
+	  preferredCountries:["in"],
+	  hiddenInput: "webappfull",
+	  utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+	});
+
+	$("#dm-contact").submit(function() {
+	  var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+	$("#dm-contact").val(full_number);
+	});
+  </script>
 	<!-- inTelInput end	-->
+
+<script>
+		function service(e){
+		let check = $('#'+e+'')
+
+		if (check.is(':checked'))
+		{
+			$('#'+e+'_service').removeClass('hide')
+		}else{
+			$('#'+e+'_service').addClass('hide')
+		}
+		}
+
+</script>
+<!--dm -->
+<script>
+			$(document).ready(function() {
+
+			let seo = 0,
+				lseo = 0,
+				email = 0,
+				ppc = 0,
+				smm  = 0,
+				youtube = 0
+				analytics = 0,
+				affiliate = 0,
+				ecom = 0,
+				mobile = 0,
+				web_traffic = 0,
+				content = 0,
+				music = 0,
+				domain = 0
+
+			 $('#keyword').click(function() {
+    		if ($(this).is(':checked')) {
+      			seo = seo+Number($(this).val())
+   			 }else{
+   			 	seo = seo-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			 $('#On-Page').click(function() {
+    		if ($(this).is(':checked')) {
+      			seo = seo+Number($(this).val())
+
+   			 }else{
+   			 	seo = seo-Number($(this).val())
+
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#Off-Page').click(function() {
+    		if ($(this).is(':checked')) {
+      			seo = seo+Number($(this).val())
+   			 }else{
+   			 	seo = seo-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#Google').click(function() {
+    		if ($(this).is(':checked')) {
+      			lseo = lseo+Number($(this).val())
+   			 }else{
+   			 	lseo = lseo-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#Local').click(function() {
+    		if ($(this).is(':checked')) {
+      			lseo = lseo+Number($(this).val())
+   			 }else{
+   			 	lseo = lseo-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#yes').click(function() {
+    		if ($(this).is(':checked')) {
+      			email = email+Number($(this).val())
+   			 }else{
+   			 	email = email-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#Mail').click(function() {
+    		if ($(this).is(':checked')) {
+      			ppc = ppc+Number($(this).val())
+   			 }else{
+   			 	ppc = ppc-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#Automation').click(function() {
+    		if ($(this).is(':checked')) {
+      			ppc = ppc+Number($(this).val())
+   			 }else{
+   			 	ppc = ppc-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#Campaign').click(function() {
+    		if ($(this).is(':checked')) {
+      			ppc = ppc+Number($(this).val())
+   			 }else{
+   			 	ppc = ppc-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#mobile').click(function() {
+    		if ($(this).is(':checked')) {
+      			smm = smm+Number($(this).val())
+   			 }else{
+   			 	smm = smm-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#contactform-mail').click(function() {
+    		if ($(this).is(':checked')) {
+      			smm = smm+Number($(this).val())
+   			 }else{
+   			 	smm = smm-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#video_seo').click(function() {
+    		if ($(this).is(':checked')) {
+      			youtube = youtube+Number($(this).val())
+   			 }else{
+   			 	youtube = youtube-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#promotion').click(function() {
+    		if ($(this).is(':checked')) {
+      			youtube = youtube+Number($(this).val())
+   			 }else{
+   			 	youtube = youtube-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#video_ad').click(function() {
+    		if ($(this).is(':checked')) {
+      			youtube = youtube+Number($(this).val())
+   			 }else{
+   			 	youtube = youtube-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#setup').click(function() {
+    		if ($(this).is(':checked')) {
+      			analytics = analytics+Number($(this).val())
+   			 }else{
+   			 	analytics = analytics-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#tracking').click(function() {
+    		if ($(this).is(':checked')) {
+      			analytics = analytics+Number($(this).val())
+   			 }else{
+   			 	analytics = analytics-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+			$('#optimization').click(function() {
+    		if ($(this).is(':checked')) {
+      			analytics = analytics+Number($(this).val())
+   			 }else{
+   			 	analytics = analytics-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#bugfixes').click(function() {
+    		if ($(this).is(':checked')) {
+      			analytics = analytics+Number($(this).val())
+   			 }else{
+   			 	analytics = analytics-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#a_service').click(function() {
+    		if ($(this).is(':checked')) {
+      			affiliate = affiliate+Number($(this).val())
+   			 }else{
+   			 	affiliate = affiliate-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#program').click(function() {
+    		if ($(this).is(':checked')) {
+      			affiliate = affiliate+Number($(this).val())
+   			 }else{
+   			 	affiliate = affiliate-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#affilates').click(function() {
+    		if ($(this).is(':checked')) {
+      			affiliate = affiliate+Number($(this).val())
+   			 }else{
+   			 	affiliate = affiliate-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#link').click(function() {
+    		if ($(this).is(':checked')) {
+      			affiliate = affiliate+Number($(this).val())
+   			 }else{
+   			 	affiliate = affiliate-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#ecomm_sco').click(function() {
+    		if ($(this).is(':checked')) {
+      			ecom = ecom+Number($(this).val())
+   			 }else{
+   			 	ecom = ecom-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#webpro').click(function() {
+    		if ($(this).is(':checked')) {
+      			ecom = ecom+Number($(this).val())
+   			 }else{
+   			 	ecom = ecom-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#prom_lstng').click(function() {
+    		if ($(this).is(':checked')) {
+      			ecom = ecom+Number($(this).val())
+   			 }else{
+   			 	ecom = ecom-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#app_store').click(function() {
+    		if ($(this).is(':checked')) {
+      			mobile = mobile+Number($(this).val())
+   			 }else{
+   			 	mobile = mobile-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+  			$('#app_prom').click(function() {
+    		if ($(this).is(':checked')) {
+      			mobile = mobile+Number($(this).val())
+   			 }else{
+   			 	mobile = mobile-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#web_treff').click(function() {
+    		if ($(this).is(':checked')) {
+      			web_traffic = web_traffic+Number($(this).val())
+   			 }else{
+   			 	web_traffic = web_traffic-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#cntnt_mrktng').click(function() {
+    		if ($(this).is(':checked')) {
+      			content = content+Number($(this).val())
+   			 }else{
+   			 	content = content-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#music_prom').click(function() {
+    		if ($(this).is(':checked')) {
+      			music = music+Number($(this).val())
+   			 }else{
+   			 	music = music-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  			$('#domain_prom').click(function() {
+    		if ($(this).is(':checked')) {
+      			domain = domain+Number($(this).val())
+   			 }else{
+   			 	domain = domain-Number($(this).val())
+   			 }
+			cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain)
+  			});
+
+  		function cal_total(seo, lseo, email, ppc, smm, youtube, analytics, affiliate, ecom, mobile, web_traffic, content, music, domain){
+  		 let TotalPrice = seo + lseo + email + ppc + smm + youtube + analytics + affiliate + ecom + mobile + web_traffic + content + music + domain
+  		 $('.seo-value').html( '$'+seo );
+  		 $('.lseo-value').html( '$'+lseo );
+  		 $('.em-value').html( '$'+email );
+  		 $('.ppc-value').html( '$'+ppc );
+  		 $('.smm-value').html( '$'+smm );
+  		 $('.youtube-value').html( '$'+youtube );
+  		 $('.web-value').html( '$'+analytics );
+  		 $('.affiliate-value').html( '$'+affiliate );
+  		 $('.ecommerce-value').html( '$'+ecom );
+  		 $('.mobile-app-value').html( '$'+mobile );
+  		 $('.web-traffic').html( '$'+web_traffic );
+  		 $('.content-value').html( '$'+content );
+  		 $('.music-value').html( '$'+music );
+  		 $('.domain-value').html( '$'+domain );
+  		 $('.dm-total-price').html( '$'+TotalPrice );
+  		 $('#dm_seo').val(seo)
+		 $('#dm_lseo').val(lseo)
+		 $('#dm_email').val(email)
+		 $('#dm_ppc').val(ppc)
+		 $('#dm_smm').val(smm)
+		 $('#dm_youtube').val(youtube)
+		 $('#dm_analytics').val(analytics)
+		 $('#dm_affiliate').val(affiliate)
+		 $('#dm_e_comm').val(ecom)
+		 $('#dm_mobile').val(mobile)
+		 $('#dm_traffic').val(web_traffic)
+		 $('#dm_content').val(content)
+		 $('#dm_music').val(music)
+		 $('#dm_domain').val(domain)
+
+  		 }
+
+		})
+</script>
 
 
 

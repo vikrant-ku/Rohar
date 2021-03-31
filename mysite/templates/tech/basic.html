@@ -146,7 +146,7 @@ function success(e){
 										<div class="container">
 											<div class="row">
 												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<a href="/web_development/"><li class="menu-item">
+													<a href="{% url 'web_developement' %}"><li class="menu-item">
 														<div class="widget">
 															<div class="feature-box not-dark fbox-center mb-0">
 																<div class="fbox-icon">
@@ -161,7 +161,7 @@ function success(e){
 													</li></a>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<a href="/digital_marketing/"><li class="menu-item">
+													<a href="{% url 'digital_marketing' %}"><li class="menu-item">
 														<div class="widget">
 
 															<div class="feature-box not-dark fbox-center mb-0">
@@ -177,7 +177,7 @@ function success(e){
 													</li></a>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<a href="/app_development/"><li class="menu-item">
+													<a href="{% url 'app_developement' %}"><li class="menu-item">
 														<div class="widget">
 															<div class="feature-box not-dark fbox-center mb-0">
 																<div class="fbox-icon">
@@ -192,7 +192,7 @@ function success(e){
 													</li></a>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<a href="/web_&_graphics_designing/" ><li class="menu-item">
+													<a href="{% url 'web_&_graphics_designing' %}" ><li class="menu-item">
 														<div class="widget">
 															<div class="feature-box not-dark fbox-center mb-0">
 																<div class="fbox-icon">
@@ -213,9 +213,9 @@ function success(e){
 									</div>
 								</li>
 								<li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-desktop1"></i>Portfolio</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/about_us/"><div><i class="icon-file-alt"></i>About</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/faqs/"><div><i class="icon-pencil2"></i>FAQs</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="/contact_us/"><div><i class="icon-line-location"></i>Contact</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{% url 'about' %}"><div><i class="icon-file-alt"></i>About</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{% url 'faqs' %}"><div><i class="icon-pencil2"></i>FAQs</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{% url 'contact' %}"><div><i class="icon-line-location"></i>Contact</div></a></li>
 							</ul>
 
 						</nav>
@@ -261,15 +261,15 @@ function success(e){
 								<h4 data-animate="fadeInUp">Quick Links</h4>
 
 								<ul class="list-unstyled iconlist ml-0">
-									<li><a href="/">Home</a></li>
-									<li><a href="/about_us/">About Us</a></li>
-									<li><a href="/faqs/">FAQ's</a></li>
-									<li><a href="/contact_us/">Contact Us</a></li>
+									<li><a href="{%url 'index'%}">Home</a></li>
+									<li><a href="{%url 'about'%}">About Us</a></li>
+									<li><a href="{%url 'faqs'%}">FAQ's</a></li>
+									<li><a href="{%url 'contact'%}">Contact Us</a></li>
 									<li><a href="#">Portfolio</a></li>
-									<li><a href="/web_development/">Web Development</a></li>
-									<li><a href="/digital_marketing/">Digital Marketing</a></li>
-									<li><a href="/app_development/">App Development</a></li>
-									<li><a href="/web_&_graphics_designing/">Web & Graphics designing</a></li>
+									<li><a href="{%url 'web_developement'%}">Web Development</a></li>
+									<li><a href="{%url 'digital_marketing'%}">Digital Marketing</a></li>
+									<li><a href="{%url 'app_developement'%}">App Development</a></li>
+									<li><a href="{%url 'web_&_graphics_designing'%}">Web & Graphics designing</a></li>
 
 								</ul>
 
