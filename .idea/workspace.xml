@@ -19,14 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="add St.lamart in recent projects">
-      <change afterPath="$PROJECT_DIR$/mysite/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/requirementx.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/prod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/requirements.txt" beforeDir="false" />
+    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update settings">
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623819928693</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update settings">
+      <created>1623823400934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623823400934</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +129,7 @@
     <MESSAGE value="update address" />
     <MESSAGE value="update address and mobile" />
     <MESSAGE value="add St.lamart in recent projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="add St.lamart in recent projects" />
+    <MESSAGE value="update settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="update settings" />
   </component>
 </project>
