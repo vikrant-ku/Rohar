@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update settings">
+    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update settings __init__">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/mysite/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623823400934</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update settings __init__">
+      <created>1623823448106</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623823448106</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +139,7 @@
     <MESSAGE value="update address and mobile" />
     <MESSAGE value="add St.lamart in recent projects" />
     <MESSAGE value="update settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="update settings" />
+    <MESSAGE value="update settings __init__" />
+    <option name="LAST_COMMIT_MESSAGE" value="update settings __init__" />
   </component>
 </project>
