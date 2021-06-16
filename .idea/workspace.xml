@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update STATIC_URL">
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/__init__.py" afterDir="false" />
+    <list default="true" id="cf3c46d4-767d-44b0-a745-6469e58738ae" name="Default Changelist" comment="update STATIC_URL1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings/prod.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623823946848</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update STATIC_URL1">
+      <created>1623823970333</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623823970333</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +161,7 @@
     <MESSAGE value="update settings" />
     <MESSAGE value="update settings __init__" />
     <MESSAGE value="update STATIC_URL" />
-    <option name="LAST_COMMIT_MESSAGE" value="update STATIC_URL" />
+    <MESSAGE value="update STATIC_URL1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update STATIC_URL1" />
   </component>
 </project>
