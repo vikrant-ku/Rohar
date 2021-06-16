@@ -1,4 +1,4 @@
-#!d:\rohar\venv\scripts\python.exe
+#!C:\Users\ADMIN\Desktop\Rohar\venv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
